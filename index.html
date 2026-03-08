@@ -63,7 +63,16 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
         flex-shrink: 0;
       }
-
+      
+    @media (max-width: 640px) {
+    .header-bar {
+      flex-direction: column;
+      align-items: center;
+    }
+    .header-nav {
+      justify-content: center;
+    }
+  }
       .brand-header {
         margin: 0;
         flex-shrink: 0;
