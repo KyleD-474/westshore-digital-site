@@ -57,7 +57,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
-        padding: 1.1rem 28px;
+        padding: 0.9rem 28px;
         z-index: 1000;
         background: var(--wd-white);
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -76,11 +76,29 @@
         color: inherit;
       }
 
-      .header-logo img,
-      .header-wordmark img {
-        display: block;
-        height: auto;
-      }
+
+      .header-logo img {
+            height: 120px;
+            width: auto;
+            display: block;
+        }
+
+        .header-wordmark img {
+            width: 302px;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 640px) {
+        .header-logo img {
+        height: 42px;
+        }
+
+        .header-wordmark img {
+        width: 160px;
+        }
+
+        }
 
       .header-nav {
         display: flex;
@@ -522,7 +540,7 @@
       <div class="header-bar">
         <h1 class="brand-header">
           <a href="#">
-            <span class="header-logo">
+            <!-- <span class="header-logo">
               <img
                 src="images/wd-logos/westshore_digital_logo.png"
                 width="136"
@@ -535,7 +553,17 @@
                 width="302"
                 height="120"
               />
-            </span>
+            </span> -->
+            <span class="header-logo">
+                <img
+                  src="images/wd-logos/westshore_digital_logo.png"
+                />
+              </span>
+              <span class="header-wordmark">
+                <img
+                  src="images/wd-logos/westshore_digital_wordmark.png"
+                />
+              </span>
           </a>
         </h1>
 
