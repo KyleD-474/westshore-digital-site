@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Westshore Digital | Local Computer Help</title>
+
+    <meta
+      name="description"
+      content="Westshore Digital provides computer help, faster computers, data transfer, and tech support from Clearwater to Venice — St. Petersburg, Sarasota, and the Gulf Coast."
+    />
+
+    <style>
+      :root {
+        --wd-blue-primary: #1f4363;
+        --wd-blue-accent: #3e8fb5;
+        --wd-blue-light: #58a9c9;
+        --wd-orange: #f26a2e;
+        --wd-gold: #f5b335;
+        --wd-text-dark: #1b2e44;
+        /* --wd-bg-light: #f2f4f6; */
+        --wd-bg-light: #eef2f6;
+        --wd-white: #ffffff;
+        --wd-font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+        --wd-font-heading: "Plus Jakarta Sans", system-ui, sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--wd-font-body);
+        margin: 0;
+        background: var(--wd-bg-light);
+        color: var(--wd-text-dark);
+        line-height: 1.65;
+      }
+      .phone-icon {
+        margin-right: 8px;
+        vertical-align: middle;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 30px auto;
+        background: var(--wd-white);
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        padding: 0;
+      }
+
+      .header-bar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1.1rem 28px;
+        z-index: 1000;
+        background: var(--wd-white);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .brand-header {
+        margin: 0;
+        flex-shrink: 0;
+      }
+
+      .brand-header a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .header-logo img,
+      .header-wordmark img {
+        display: block;
+        height: auto;
+      }
+
+      .header-nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .header-nav a {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--wd-text-dark);
+        text-decoration: none;
+      }
+
+      .header-nav a:not(.header-cta-btn):hover {
+        color: var(--wd-blue-primary);
+        border-bottom: 2px solid var(--wd-blue-primary);
+      }
+
+      .header-cta-btn {
+        padding: 0.5rem 1rem;
+        background: var(--wd-blue-primary);
+        color: white !important;
+        border-radius: 6px;
+        font-weight: 700;
+        display: inline-block;
+        letter-spacing: 0.02em;
+      }
+
+      .header-cta-btn:hover {
+        background: var(--wd-blue-accent);
+      }
+
+      .headline-band {
+        background: var(--wd-blue-primary);
+        color: white;
+        padding: 1.25rem 20px;
+        text-align: center;
+      }
+
+      .headline-band-inner {
+        max-width: 720px;
+        margin: auto;
+      }
+
+      .headline-band-text {
+        margin: 0;
+        font-family: var(--wd-font-heading);
+        font-weight: 700;
+        font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      }
+
+      .headline-band-cta {
+        margin-top: 1.05rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        font-size: 1.4rem;
+      }
+
+      .headline-band-cta a {
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.4rem;
+        letter-spacing: 0.02em;
+      }
+
+      .headline-band-cta a:hover {
+        text-decoration: underline;
+        color: var(--wd-blue-light);
+      }
+
+      .hero-trust {
+        margin-top: 6px;
+        font-size: 0.95rem;
+        opacity: 0.9;
+        font-weight: 600;
+        color: #ffffff;
+      }
+
+      .hero-section {
+        background: linear-gradient(
+          180deg,
+          var(--wd-blue-primary) 0%,
+          var(--wd-blue-primary) 120px,
+          #f8fafc 120px,
+          #f8fafc 100%
+        );
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      }
+      .hero-img {
+        max-width: 720px;
+        margin: auto;
+        padding: 2rem 20px 2.5rem;
+      }
+
+      .hero-img img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+      }
+
+      .section-intro {
+        margin-top: 6px;
+        margin-bottom: 10px;
+        color: #4a5b6a;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      section {
+        padding: clamp(2rem, 5vw, 3.5rem) 20px;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      section:first-of-type {
+        border-top: none;
+      }
+
+      section:nth-of-type(even) {
+        background: #f7f9fc;
+      }
+
+      h2 {
+        font-family: var(--wd-font-heading);
+        font-weight: 700;
+        color: var(--wd-blue-primary);
+        margin-bottom: 1.25rem;
+        font-size: clamp(1.35rem, 2.5vw, 1.5rem);
+        border-bottom: 2px solid rgba(31, 67, 99, 0.15);
+        padding-bottom: 6px;
+        letter-spacing: 0.02em;
+      }
+
+      h3 {
+        font-family: var(--wd-font-heading);
+        font-weight: 700;
+        color: var(--wd-blue-primary);
+      }
+
+      p a {
+        color: var(--wd-blue-primary);
+      }
+      p a:hover {
+        color: var(--wd-blue-accent);
+      }
+      .services {
+        display: grid;
+        gap: 2rem;
+      }
+
+      .service-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .service-img {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        height: 240px;
+      }
+
+      .service-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .service {
+        background: #fbfcfe;
+        padding: 1rem 1.25rem;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .service h3 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .service h3::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: var(--wd-blue-accent);
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      @media (min-width: 700px) {
+        .service-item {
+          /* grid-template-columns: minmax(200px, 280px) 1fr; */
+          grid-template-columns: 2fr 3fr;
+          align-items: center;
+        }
+      }
+
+      .reasons {
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      @media (min-width: 640px) {
+        .reasons {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2rem;
+        }
+      }
+
+      .about {
+        display: grid;
+        gap: 1.5rem;
+        align-items: center;
+      }
+
+      @media (min-width: 640px) {
+        .about {
+          grid-template-columns: 2fr 3fr;
+          gap: 2rem;
+        }
+      }
+
+      .about-headshot {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin: auto;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+      }
+
+      .repair-list {
+        columns: 2;
+        column-gap: 40px;
+      }
+
+      .repair-list li {
+        margin-bottom: 10px;
+      }
+
+      .repair-list li::marker {
+        color: var(--wd-blue-primary);
+      }
+
+      .service-area-content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-top: 1rem;
+      }
+
+      .service-map img {
+        width: 160px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+      }
+
+      .service-area-list {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 6px 60px;
+        /* list-style: none; */
+        padding-left: 30px;
+      }
+      .service-area-list li:last-child {
+        grid-column: 1 / -1;
+        margin-bottom: 0;
+      }
+      @media (max-width: 640px) {
+        .service-area-content {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .service-map img {
+          width: 200px;
+        }
+      }
+      .map iframe {
+        width: 100%;
+        height: 350px;
+        border: 0;
+        border-radius: 8px;
+      }
+
+      .contact {
+        background: var(--wd-blue-primary);
+        color: white;
+        text-align: center;
+        padding: clamp(2.5rem, 5vw, 3.5rem) 20px;
+      }
+
+      .contact h2 {
+        color: white;
+      }
+      .contact-call-cta {
+        margin: 1.75rem 0 2rem;
+      }
+
+      .contact-call-btn {
+        display: inline-block;
+        background: white;
+        color: var(--wd-blue-primary);
+        font-weight: 700;
+        font-size: 1.15rem;
+        padding: 14px 26px;
+        border-radius: 6px;
+        text-decoration: none;
+        border: 2px solid var(--wd-blue-light);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.15s ease;
+      }
+
+      .contact-call-btn:hover {
+        background: var(--wd-blue-light);
+        color: white;
+        border-color: var(--wd-blue-light);
+        transform: translateY(-1px);
+      }
+      form {
+        max-width: 500px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: left;
+      }
+
+      input,
+      textarea {
+        padding: 12px 14px;
+        border-radius: 6px;
+        border: 1px solid #d6dee6;
+        font-family: inherit;
+      }
+
+      button {
+        padding: 14px 20px;
+        background: white;
+        color: var(--wd-blue-primary);
+        border: 2px solid var(--wd-blue-primary);
+        border-radius: 6px;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 8px;
+      }
+
+      button:hover {
+        background: var(--wd-bg-light);
+        color: var(--wd-blue-accent);
+        border-color: var(--wd-blue-light);
+      }
+
+      .phone-email {
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .phone-email a {
+        font-size: 1.35rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: white;
+      }
+
+      .phone-email a:hover {
+        text-decoration: underline;
+        color: var(--wd-blue-light);
+      }
+
+      .seo-service-summary {
+        max-width: 720px;
+        margin: 2rem auto 10px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #5a6a78;
+        line-height: 1.6;
+      }
+      footer {
+        text-align: center;
+        padding: 1rem 20px;
+        font-size: 0.875rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .footer-wordmark {
+        width: 220px;
+        margin: auto;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .floating-contact {
+        position: fixed;
+        bottom: 22px;
+        right: 22px;
+        background: var(--wd-blue-primary);
+        color: white;
+        padding: 14px 18px;
+        border-radius: 6px;
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+        z-index: 2000;
+      }
+
+      .floating-contact:hover {
+        background: var(--wd-blue-accent);
+      }
+    </style>
+
+    <link
+      rel="icon"
+      href="images/wd-logos/westshore_digital_logo.png"
+      type="image/png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header-bar">
+        <h1 class="brand-header">
+          <a href="#">
+            <span class="header-logo">
+              <img
+                src="images/wd-logos/westshore_digital_logo.png"
+                width="136"
+                height="120"
+              />
+            </span>
+            <span class="header-wordmark">
+              <img
+                src="images/wd-logos/westshore_digital_wordmark.png"
+                width="302"
+                height="120"
+              />
+            </span>
+          </a>
+        </h1>
+
+        <nav class="header-nav">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#service-area">Service Area</a>
+          <a href="#contact" class="header-cta-btn">Contact Me</a>
+        </nav>
+      </div>
+      <div class="hero-section">
+        <div class="headline-band">
+          <div class="headline-band-inner">
+            <p class="headline-band-text">
+              Local computer help, upgrades, and friendly tech support — from
+              Clearwater to Venice, along the Gulf Coast.
+            </p>
+            <p class="hero-trust">
+              ✓ Local St. Petersburg technician<br />
+              ✓ Same-day or next-day service available<br />
+              ✓ Friendly, patient, in-home tech help
+            </p>
+            <p class="headline-band-cta">
+              Call or Text: <a href="tel:+1727XXXXXXX">(727) XXX-XXXX</a>
+            </p>
+          </div>
+        </div>
+        <div class="hero-img">
+          <!-- <img
+          src="images/hero.svg"
+          alt="Westshore Digital — local computer help and tech support in your home or office."
+          width="900"
+          height="400"
+        /> -->
+          <img
+            src="images/wowwie.jpg"
+            alt="Westshore Digital — local computer help and tech support in your home or office."
+            width="900"
+            height="400"
+          />
+        </div>
+      </div>
+
+      <main id="main">
+        <section id="services">
+          <h2>Services</h2>
+          <div class="services">
+            <p class="section-intro">
+              Here are the most common ways I help people get their computers
+              and devices working again:
+            </p>
+            <div class="service-item">
+              <div class="service-img">
+                <img
+                  src="images/services.svg"
+                  alt="In-home tech help — WiFi, printer, device setup and troubleshooting."
+                  width="600"
+                  height="400"
+                />
+              </div>
+              <div class="service">
+                <h3>In-Home Tech Help</h3>
+                <p>
+                  Technology issues often involve multiple devices and are
+                  easier to solve in person.
+                </p>
+                <ul>
+                  <li>WiFi troubleshooting</li>
+                  <li>Printer issues</li>
+                  <li>Device setup</li>
+                  <li>General troubleshooting</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-img">
+              <img
+                src="images/services2.svg"
+                alt="Computer performance upgrades — speed up your computer, SSD upgrades, system cleanup."
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="service">
+              <h3>Computer Performance Upgrades</h3>
+              <p>
+                If your computer is slow or takes several minutes to start, it
+                may still be using an old hard drive.
+              </p>
+              <ul>
+                <li>
+                  Speed up your computer (including SSD upgrades when needed)
+                </li>
+                <li>System cleanup and optimization</li>
+                <li>Startup performance improvements</li>
+              </ul>
+              <p>Many systems feel dramatically faster after this upgrade!</p>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-img">
+              <img
+                src="images/services3.svg"
+                alt="New computer setup and data transfer — file transfer, email and printer setup."
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="service">
+              <h3>New Computer Setup & Data Transfer</h3>
+              <p>
+                Buying a new computer shouldn't mean losing your files or
+                starting over.
+              </p>
+              <ul>
+                <li>File and photo transfer</li>
+                <li>Email setup</li>
+                <li>Printer setup</li>
+                <li>Basic software configuration</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Common Problems We Fix</h2>
+
+          <ul class="repair-list">
+            <li>Computer takes several minutes to start</li>
+            <li>Printer won't connect</li>
+            <li>Wi-Fi is slow or keeps disconnecting</li>
+            <li>New computer needs to be set up</li>
+            <li>Photos or files need to be transferred</li>
+            <li>Email or passwords not working correctly</li>
+            <li>
+              Devices not talking to each other (computer, printer, phone)
+            </li>
+          </ul>
+
+          <p>
+            If you're dealing with any of these issues, you're not alone — these
+            are some of the most common problems I help people solve every week.
+            I can get everything working again!
+          </p>
+        </section>
+
+        <section>
+          <h2>Why Choose Westshore Digital</h2>
+          <div class="reasons">
+            <p>
+              <strong>Clear communication</strong><br />
+              I explain what is happening and what your options are before doing
+              any work.
+            </p>
+            <p>
+              <strong>Reliable service</strong><br />
+              I schedule appointments clearly and on time.
+            </p>
+            <p>
+              <strong>Practical solutions</strong><br />
+              My goal is to fix the real problem, not apply temporary patches.
+            </p>
+          </div>
+        </section>
+
+        <!-- <section>
+          <h2>What Customers Say</h2>
+
+          <div class="reviews">
+            <p>
+              “Kyle fixed my slow laptop and it feels like a brand new computer.
+              He explained everything clearly and was incredibly patient.”
+              <br /><strong>— Mary, St. Petersburg</strong>
+            </p>
+
+            <p>
+              “He helped set up our new computer and transferred all our photos
+              and files. Everything worked perfectly.”
+              <br /><strong>— James, Clearwater</strong>
+            </p>
+
+            <p>
+              “Finally someone who explains tech problems in plain English.
+              Highly recommend.”
+              <br /><strong>— Linda, Sarasota</strong>
+            </p>
+          </div>
+        </section> -->
+
+        <section id="about">
+          <h2>About Westshore Digital</h2>
+          <div class="about">
+            <div class="about-headshot-wrap">
+              <img
+                class="about-headshot"
+                src="images/kd-headshot.jpg"
+                alt="Kyle Dennis — Westshore Digital"
+                width="200"
+                height="200"
+              />
+              <p class="about-tagline">
+                Local computer engineer — helping residents with everyday
+                technology.
+              </p>
+            </div>
+            <div class="about-text">
+              <p>
+                I'm Kyle Dennis — trained as a computer engineer, working in the
+                industry as a professional software engineer. I grew up helping
+                family and friends with the same stuff that drives most of us
+                crazy: slow computers, a printer that just won't connect, lost
+                passwords, Wi‑Fi that drops, and email that never quite does
+                what you want. I've sat at the kitchen table with my grandmother
+                more times than I can count, and I get how important it is to
+                have someone patient, clear, and respectful in your home.
+              </p>
+              <p>
+                Most of the people I help simply want their technology to work
+                the way it should — without stress or confusion.
+              </p>
+
+              <p>
+                Westshore Digital is built around that. You're not getting a
+                random technician — you're getting someone who treats your time
+                and your trust seriously. I'll explain what's going on in plain
+                English, show you what I'm doing when it makes sense, and I'll
+                never leave a job until you're comfortable. Your peace of mind
+                and a working setup are what I care about most. Westshore
+                Digital proudly serves residents from Clearwater to Venice and
+                the Gulf Coast communities in between.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing">
+          <h2>Simple Pricing</h2>
+
+          <p>
+            Most service visits typically range between
+            <strong>$75 and $150</strong>, depending on the issue.
+          </p>
+
+          <p>
+            You'll always know the cost before any work begins. My goal is to
+            solve the problem clearly and efficiently — not run up the clock.
+          </p>
+
+          <!-- <p>
+            If you're unsure what the issue is, feel free to
+            <a href="#contact">reach out</a> and describe what's happening.
+          </p> -->
+
+          <p>
+            If your computer is slow, acting strange, or you're setting up a new
+            one,
+            <strong
+              >feel free to call or text and describe what's happening.</strong
+            >
+          </p>
+
+          <p>
+            <a href="tel:+1727XXXXXXX" class="header-cta-btn">
+              Call or Text Now
+            </a>
+          </p>
+        </section>
+
+        <section id="service-area">
+          <h2>Service Area</h2>
+
+          <p>
+            Based in St. Petersburg with strong ties to Sarasota, I serve the
+            Gulf Coast from Clearwater to Venice and the communities in between.
+          </p>
+
+          <div class="service-area-content">
+            <div class="service-map">
+              <img
+                src="images/gulf-coast-service-area.png"
+                alt="Westshore Digital service area from Clearwater to Venice along Florida's Gulf Coast"
+              />
+            </div>
+
+            <ul class="service-area-list">
+              <li>Tarpon Springs</li>
+              <li>Bradenton</li>
+              <li>Dunedin</li>
+              <li>Palmetto</li>
+              <li>Safety Harbor</li>
+              <li>Sarasota</li>
+              <li>Clearwater</li>
+              <li>Nokomis</li>
+              <li>Largo</li>
+              <li>Venice</li>
+              <li>Pinellas Park</li>
+              <li>Nearby Gulf Coast areas</li>
+              <li>St. Petersburg</li>
+            </ul>
+          </div>
+
+          <p class="service-area-note">
+            Don't see your town? If you're anywhere along the Gulf Coast from
+            Clearwater to Venice, <a href="#contact">reach out</a>! I likely
+            serve your area.
+          </p>
+          <!-- <div class="map">
+            <iframe
+              style="border: 0"
+              loading="lazy"
+              title="Service area: Clearwater to Venice, Florida"
+              allowfullscreen
+              src="https://www.google.com/maps?q=27.8523,-82.7071&z=9&output=embed"
+            >
+            </iframe>
+          </div> -->
+        </section>
+
+        <div class="contact" id="contact">
+          <h2>Contact Me</h2>
+
+          <p></p>
+          <p>
+            If your computer or technology isn't working the way it should, feel
+            free to reach out. I'm happy to help!
+          </p>
+          <p>
+            You can call, text, or send a message below — whatever is easiest.
+          </p>
+          <p class="contact-call-cta">
+            <a href="tel:+1727XXXXXXX" class="contact-call-btn">
+                <svg
+                class="phone-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 2 20 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 6a1 1 0 011-1h3.49a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1z"
+                /></svg>Call Now: (727) XXX-XXXX
+            </a>
+          </p>
+          <form action="https://formspree.io/f/yourformid" method="POST">
+            <label for="contact-name">Your name</label>
+            <input
+              id="contact-name"
+              type="text"
+              name="name"
+              placeholder="e.g. Jane Smith"
+              required
+            />
+            <label for="contact-email">Your email</label>
+            <input
+              id="contact-email"
+              type="email"
+              name="email"
+              placeholder="e.g. jane@example.com"
+              required
+            />
+            <label for="contact-message">How can I help?</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows="5"
+              placeholder="Describe your computer issue or what you need"
+            ></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+
+          <p class="phone-email">
+            Phone / Text:
+            <strong><a href="tel:+1727XXXXXXX">(727) XXX-XXXX</a></strong
+            ><br />
+            Email:
+            <strong
+              ><a href="mailto:kyle@westshoredigitalfl.com"
+                >kyle@westshoredigitalfl.com</a
+              ></strong
+            >
+          </p>
+        </div>
+
+        <p class="seo-service-summary">
+          Westshore Digital provides in-home computer help, tech support,
+          computer upgrades, and data transfer services in St. Petersburg,
+          Clearwater, Largo, Pinellas Park, and across Pinellas County, Florida.
+        </p>
+      </main>
+
+      <footer>
+        <p>
+          <img
+            src="images/wd-logos/westshore_digital_wordmark.png"
+            alt="Westshore Digital"
+            class="footer-wordmark"
+          />
+        </p>
+        <p>
+          Computer Help and Tech Support for Clearwater, Largo, St. Petersburg,
+          and the Gulf Coast
+        </p>
+        <p>
+          <a href="#top">Back to top</a> ·
+          <a href="mailto:kyle@westshoredigitalfl.com">Email</a> ·
+          <a href="tel:+1727XXXXXXX">Call or Text</a>
+        </p>
+      </footer>
+    </div>
+    <a href="tel:+1727XXXXXXX" class="floating-contact">
+      <svg
+        class="phone-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="22"
+        viewBox="0 2 20 24"
+        fill="currentColor"
+      >
+        <path
+          d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 6a1 1 0 011-1h3.49a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1z"
+        /></svg>Call Now</a>
+  </body>
+</html>
