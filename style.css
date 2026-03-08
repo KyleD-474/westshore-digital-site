@@ -87,23 +87,23 @@ body {
 }
 
 .header-logo img {
-  height: 120px;
+  height: 100px;
   width: auto;
   display: block;
 }
 
 .header-wordmark img {
-  width: 302px;
+  width: 320px;
   height: auto;
   display: block;
 }
 
 @media (max-width: 640px) {
   .header-logo img {
-    height: 90px;
+    height: 80px;
   }
   .header-wordmark img {
-    max-width: 180px;
+    width: 240px;
   }
 }
 
