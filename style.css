@@ -99,9 +99,6 @@ body {
 }
 
 @media (max-width: 640px) {
-  .brand-header a {
-    gap: 0.5rem;
-  }
   .header-logo img {
     height: 90px;
   }
