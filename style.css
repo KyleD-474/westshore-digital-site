@@ -107,7 +107,7 @@ body {
     height: 90px;
   }
   .header-wordmark img {
-    height: 50px;
+    max-width: 180px;
   }
 }
 
