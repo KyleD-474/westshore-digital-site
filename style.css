@@ -61,7 +61,6 @@ body {
   z-index: 1000;
   background: var(--wd-white);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  flex-shrink: 0;
 }
 
 @media (max-width: 640px) {
