@@ -308,14 +308,14 @@ p a:hover {
   gap: 10px;
 }
 
-.service h3::before {
+/* .service h3::before {
   content: "";
   width: 10px;
   height: 10px;
   background: var(--wd-blue-accent);
   border-radius: 50%;
   flex-shrink: 0;
-}
+} */
 
 @media (min-width: 700px) {
   .service-item {
