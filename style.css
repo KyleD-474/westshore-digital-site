@@ -265,6 +265,7 @@
     border: 2px solid var(--wd-blue-light);
     margin-top: 10px;
     transition: all 0.15s ease;
+    white-space: nowrap;
   }
 
 .hero-call-btn:hover {
@@ -276,10 +277,8 @@
   
 @media (max-width: 640px) {
   .hero-call-btn {
-    display: block;
     max-width: 320px;
     margin: 14px auto 0;
-    text-align: center;
   }
 }
   /* ==========================================================================
