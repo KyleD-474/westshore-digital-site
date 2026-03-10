@@ -339,6 +339,12 @@
     padding-bottom: 6px;
     letter-spacing: 0.02em;
   }
+
+  @media (max-width: 640px) {
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
   
   h3 {
     font-family: var(--wd-font-heading);
