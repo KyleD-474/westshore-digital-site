@@ -27,6 +27,10 @@
     color: var(--wd-text-dark);
     line-height: 1.65;
   }
+
+  main {
+    padding-bottom: 80px;
+  }
   
   /* ==========================================================================
      Layout — .container, shared utilities
@@ -43,7 +47,8 @@
     background: var(--wd-white);
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow: visible;
     padding: 0;
   }
   
@@ -245,26 +250,44 @@
      Main — section defaults, headings, paragraph links
      ========================================================================== */
   
-  section {
+  /* section {
     padding: clamp(2rem, 5vw, 3.5rem) 20px;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
+  } */
+
+  section {
+    background: white;
+    border-radius: 10px;
+    padding: clamp(2rem, 5vw, 3rem) 22px;
+    margin: 28px 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
   }
 
   @media (max-width: 700px) {
-    section p {
+    section:not(.contact) p {
       max-width: 95%;
       margin-left: auto;
       margin-right: auto;
     }
   }
+
+  @media (max-width: 640px) {
+    section {
+      margin: 18px 12px;
+    }
+  }
   
-  section:first-of-type {
+  /* section:first-of-type {
     border-top: none;
+  } */
+
+  section:first-of-type {
+    margin-top: 20px;
   }
   
-  section:nth-of-type(even) {
+  /* section:nth-of-type(even) {
     background: #f7f9fc;
-  }
+  } */
   
   h2 {
     font-family: var(--wd-font-heading);
@@ -404,17 +427,31 @@
      Section: Why Choose Westshore Digital — .reasons
      ========================================================================== */
   
-  .reasons {
-    display: grid;
-    gap: 1.5rem;
-  }
-  
-  @media (min-width: 640px) {
     .reasons {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+      display: grid;
+      gap: 1.2rem;
+      max-width: 700px;
     }
-  }
+    
+    .reasons strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .reasons p {
+      background: #fbfcfe;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin: 0;
+    }
+    
+    @media (min-width: 640px) {
+      .reasons {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+    }
   
   /* ==========================================================================
      Section: About (#about) — .about, .about-headshot
@@ -475,22 +512,36 @@
   }
   
   @media (max-width: 640px) {
+
     .service-area-content {
       flex-direction: column;
       align-items: center;
+      text-align: center;
     }
-  
+    
     .service-map img {
-      width: 260px;
+      width: 100%;
+      max-width: 340px;
     }
-  
-    .service-area-list {
-      grid-template-columns: 1fr;
-      gap: 8px;
-      text-align: left;
-    }
+    
   }
   
+  .service-cities-wrap {
+    max-width: 500px;
+  }
+  
+  .cities-title {
+    font-family: var(--wd-font-heading);
+    color: var(--wd-blue-primary);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .service-cities p {
+    margin: 6px 0;
+    font-weight: 500;
+  }
+
   .map iframe {
     width: 100%;
     height: 350px;
@@ -507,6 +558,9 @@
     color: white;
     text-align: center;
     padding: clamp(2.5rem, 5vw, 3.5rem) 20px;
+    box-shadow: none;
+    margin-left: 18px;
+    margin-right: 18px;
   }
   
   .contact h2 {
@@ -594,14 +648,24 @@
      Main end — .seo-service-summary
      ========================================================================== */
   
-  .seo-service-summary {
-    max-width: 720px;
-    margin: 2rem auto 10px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #5a6a78;
-    line-height: 1.6;
-  }
+    .seo-service-summary {
+      max-width: 650px;
+      margin: 2.5rem auto;
+      padding: 0 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6a7a88;
+      line-height: 1.6;
+    }
+
+    .seo-service-summary::before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: rgba(0,0,0,0.15);
+      margin: 0 auto 16px;
+    }
   
   /* ==========================================================================
      Footer
