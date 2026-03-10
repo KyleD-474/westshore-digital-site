@@ -277,7 +277,6 @@
 @media (max-width: 640px) {
   .hero-call-btn {
     display: block;
-    width: 100%;
     max-width: 320px;
     margin: 14px auto 0;
     text-align: center;
