@@ -2,7 +2,7 @@
    Variables & base
    ========================================================================== */
 
-   :root {
+  :root {
     --wd-blue-primary: #1f4363;
     --wd-blue-accent: #3e8fb5;
     --wd-blue-light: #58a9c9;
@@ -272,18 +272,17 @@
     color: white;
     border-color: var(--wd-blue-light);
     transform: translateY(-1px);
-  }
+}
   
-  @media (max-width: 640px) {
-    .hero-call-btn {
-      display: block;
-      width: 100%;
-      max-width: 320px;
-      margin: 14px auto 0;
-      text-align: center;
-    }
-  
+@media (max-width: 640px) {
+  .hero-call-btn {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 14px auto 0;
+    text-align: center;
   }
+}
   /* ==========================================================================
      Main — section defaults, headings, paragraph links
      ========================================================================== */
@@ -305,7 +304,7 @@
   section:first-of-type {
     margin-top: 12px;
   }
-  
+
   @media (max-width: 700px) {
     section:not(.contact) p {
       max-width: 95%;
@@ -470,32 +469,36 @@
      Section: Why Choose Westshore Digital — .reasons
      ========================================================================== */
   
-    .reasons {
-      display: grid;
-      gap: 1.2rem;
-      width: 100%;
-    }
-    
-    .reasons strong {
-      display: block;
-      margin-bottom: 4px;
-    }
+  .reasons {
+    display: grid;
+    gap: 1.2rem;
+    width: 100%;
+  }
+  
+  .reasons strong {
+    display: block;
+    margin-bottom: 4px;
+  }
 
+  .reasons p {
+    background: #fbfcfe;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  @media (min-width: 700px) {
+    .reasons {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
     .reasons p {
-      background: #fbfcfe;
-      border: 1px solid rgba(0,0,0,0.06);
-      border-radius: 10px;
-      padding: 16px 18px;
-      margin: 0;
-      height: 100%;
+      padding: 14px 16px;
     }
-    
-    @media (min-width: 700px) {
-      .reasons {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-      }
-    }
+  }
   
   /* ==========================================================================
      Section: About (#about) — .about, .about-headshot
@@ -523,49 +526,30 @@
     margin: auto;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   }
-  
+
+  #pricing .header-cta-btn {
+    display: inline-block;
+    padding: 14px 22px;
+  }
+
   /* ==========================================================================
      Section: Service Area (#service-area)
      ========================================================================== */
   
-    .service-area-content {
-      display: block;
-      margin-top: 1rem;
-    }
-  
-   .service-map img {
-      width: 260px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    }
-  
-  .service-area-list {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 6px 60px;
-    /* list-style: none; */
-    padding-left: 30px;
+  .service-area-content {
+    display: block;
+    margin-top: 1rem;
   }
-  
-  .service-area-list li:last-child {
-    grid-column: 1 / -1;
-    margin-bottom: 0;
-  }
-  
-  @media (max-width: 700px) {
 
-    .service-area-content {
-      flex-direction: column;
-      text-align: center;
-    }
-  
+  .service-map img {
+    width: 260px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   }
+  
   @media (max-width: 640px) {
-
     .service-area-content {
-      flex-direction: column;
-      align-items: center;
       text-align: center;
     }
     
@@ -573,15 +557,15 @@
       width: 100%;
       max-width: 340px;
     }
-    
   }
   .service-area-note {
     margin-top: 36px;
     color: #4a5b6a;
   }
   .service-cities-wrap {
-    max-width: 520px;
+    max-width: 560px;
     margin-top: 6px;
+    text-align: left;
   }
   
   .cities-title {
@@ -591,6 +575,7 @@
   }
   .service-cities {
     text-align: left;
+    line-height: 1.6;
   }
   
   .service-cities p {
@@ -716,24 +701,24 @@
      Main end — .seo-service-summary
      ========================================================================== */
   
-    .seo-service-summary {
-      max-width: 700px;
-      margin: 1.4rem auto 0.8rem auto;
-      padding: 0 20px;
-      text-align: center;
-      font-size: 0.88rem;
-      color: #7c8a97;
-      line-height: 1.6;
-    }
+  .seo-service-summary {
+    max-width: 700px;
+    margin: 1.4rem auto 0.8rem auto;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 0.88rem;
+    color: #7c8a97;
+    line-height: 1.6;
+  }
 
-    .seo-service-summary::before {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 2px;
-      background: rgba(0,0,0,0.15);
-      margin: 0 auto 10px;
-    }
+  .seo-service-summary::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: rgba(0,0,0,0.15);
+    margin: 0 auto 10px;
+  }
   
   /* ==========================================================================
      Footer
@@ -775,4 +760,11 @@
   
   .floating-contact:hover {
     background: var(--wd-blue-accent);
+  }
+
+  @media (max-width: 640px) {
+    .floating-contact {
+      bottom: 14px;
+      right: 14px;
+    }
   }
