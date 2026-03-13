@@ -496,7 +496,7 @@
           </p>
           <form id="contact-form" action="https://formspree.io/f/xzdjgoad" method="POST">
             <input type="hidden" name="_subject" value="New Website Inquiry — Westshore Digital">
-            <!-- <input type="hidden" name="_redirect" value="https://westshoredigitalfl.com/thank-you/"> -->
+            <input type="hidden" name="_redirect" value="https://westshoredigitalfl.com/thank-you/">
             <input type="text" name="_gotcha" style="display:none">
             <label for="contact-name">Your name</label>
             <input
@@ -611,7 +611,12 @@
           });
       
           if (response.ok) {
-              form.innerHTML = "<h3>Thanks! Your message was sent.</h3><p>I’ll get back to you shortly.</p>";
+              form.innerHTML = `
+              <div class="form-success-card">
+                  <h3>Thank you for reaching out!</h3>
+                  <p>Your message was sent successfully.</p>
+                  <p>I usually respond within a few hours.</p>
+              </div>`;
           } else {
               alert("There was a problem sending your message.");
           }
