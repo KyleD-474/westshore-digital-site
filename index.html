@@ -494,7 +494,7 @@
                 /></svg>Call Now: (727) 543-8848
             </a>
           </p>
-          <form action="https://formspree.io/f/xzdjgoad" method="POST">
+          <form id="contact-form" action="https://formspree.io/f/xzdjgoad" method="POST">
             <input type="hidden" name="_subject" value="New Website Inquiry — Westshore Digital">
             <input type="hidden" name="_redirect" value="https://westshoredigitalfl.com/thank-you/">
             <input type="text" name="_gotcha" style="display:none">
@@ -595,6 +595,27 @@
           });
         });
       })();
+
+
+      const form = document.getElementById("contact-form");
+
+      form.addEventListener("submit", async function(e) {
+          e.preventDefault();
+      
+          const data = new FormData(form);
+      
+          const response = await fetch(form.action, {
+              method: form.method,
+              body: data,
+              headers: { 'Accept': 'application/json' }
+          });
+      
+          if (response.ok) {
+              form.innerHTML = "<h3>Thanks! Your message was sent.</h3><p>I’ll get back to you shortly.</p>";
+          } else {
+              alert("There was a problem sending your message.");
+          }
+      });
     </script>
   </body>
 </html>
