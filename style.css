@@ -910,6 +910,12 @@
     margin: 6px 0;
     line-height: 1.6;
   }
+
+  @media (max-width: 640px) {
+    .form-success-card h3 {
+      font-size: 1rem;
+    }
+  }
   
   /* ==========================================================================
      Main end — .seo-service-summary
