@@ -831,20 +831,21 @@
     min-height: 120px;
   }
   
-  button {
+  .submit-form-btn {
     padding: 14px 20px;
     min-height: 44px;
     box-sizing: border-box;
     background: white;
     color: var(--wd-blue-primary);
-    border: 2px solid var(--wd-blue-primary);
+    border: 2px solid var(--wd-blue-light);
     border-radius: 6px;
     font-weight: 700;
+    font-size: 0.95rem;
     cursor: pointer;
     margin-top: 8px;
   }
   
-  button:hover {
+  .submit-form-btn:hover {
     background: var(--wd-bg-light);
     color: var(--wd-blue-accent);
     border-color: var(--wd-blue-light);
@@ -852,7 +853,7 @@
   
   .phone-email {
     margin-top: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 600;
   }
   
@@ -862,8 +863,8 @@
     min-height: 44px;
     padding: 0.35rem 0.25rem;
     box-sizing: border-box;
-    font-size: 1.35rem;
-    font-weight: 700;
+    font-size: 1.15rem;
+    font-weight: 600;
     text-decoration: none;
     color: white;
   }
@@ -874,15 +875,12 @@
   }
 
   @media (max-width: 640px) {
-
     .phone-email {
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
-  
     .phone-email a {
-      font-size: 1.05rem;
+      font-size: 0.95rem;
     }
-  
   }
   
   /* ==========================================================================
