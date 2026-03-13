@@ -15,7 +15,7 @@
 
     <link
       rel="icon"
-      href="images/wd-logos/westshore_digital_logo.png"
+      href="images/wd-logos/wd-logo-transparent.png"
       type="image/png"
     />
 
@@ -32,9 +32,9 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Westshore Digital",
-        "image": "https://westshoredigitalfl.com/images/wd-logos/westshore_digital_logo.png",
+        "image": "https://westshoredigitalfl.com/images/wd-logos/wd-logo-transparent.png",
         "telephone": "+1-727-543-8848",
-        "email": "contact@westshoredigitalfl.com",
+        "email": "kyle.dennis@westshoredigitalfl.com",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "St. Petersburg",
@@ -48,6 +48,7 @@
           "Pinellas Park",
           "Dunedin",
           "Safety Harbor",
+          "Palmetto",
           "Bradenton",
           "Sarasota",
           "Venice",
@@ -64,7 +65,7 @@
         "review": [
           {
             "@type": "Review",
-            "author": { "@type": "Person", "name": "Mary" },
+            "author": { "@type": "Person", "name": "Glenna" },
             "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
             "reviewBody": "Kyle fixed my slow laptop and it feels like a brand new computer. He explained everything clearly and was incredibly patient."
           }
@@ -496,6 +497,7 @@
           </p>
           <form id="contact-form" action="https://formspree.io/f/xzdjgoad" method="POST">
             <input type="hidden" name="_subject" value="New Website Inquiry — Westshore Digital">
+            <input type="hidden" name="_redirect" value="https://westshoredigitalfl.com/thank-you/">
             <input type="text" name="_gotcha" style="display:none">
             <label for="contact-name">Your name</label>
             <input
@@ -616,7 +618,6 @@
                   <p>Your message was sent successfully.</p>
                   <p>I usually respond within a few hours.</p>
               </div>`;
-            form.scrollIntoView({ behavior: "smooth", block: "center" });
           } else {
               alert("There was a problem sending your message.");
           }
