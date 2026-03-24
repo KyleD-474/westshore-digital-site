@@ -160,10 +160,12 @@
   
   @media (max-width: 640px) {
     .header-logo img {
-      height: 80px;
+      /* height: 80px; */
+      height: 100px;
     }
     .header-wordmark img {
-      width: 240px;
+      width: 220px;
+      /* width: 240px; */
     }
   }
   
