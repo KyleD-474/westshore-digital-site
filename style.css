@@ -421,7 +421,7 @@ section {
 
 .reason-card p { margin: 0; font-size: 1.05rem; }
 
-/* Reviews */
+/* Reviews (Currently commented out in HTML) */
 .reviews {
   display: grid;
   gap: 1.5rem;
@@ -479,7 +479,7 @@ section {
   margin-bottom: 1rem;
 }
 
-.about-tagline { font-weight: 600; color: var(--wd-blue-primary); font-size: 1.05rem;}
+.about-tagline { font-weight: 700; color: var(--wd-blue-primary); font-size: 1.1rem;}
 
 /* ==========================================================================
    Pricing & Areas
@@ -563,7 +563,7 @@ section {
 .contact-subtext {   
   margin-top: 1.5rem; 
   color: #e6eff7;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
@@ -630,7 +630,7 @@ section {
 #contact-form button.submit-form-btn:hover { 
   background: var(--wd-gold-hover); 
   transform: translateY(-2px);
-  }
+}
 
 .form-success-card {
   text-align: center;
